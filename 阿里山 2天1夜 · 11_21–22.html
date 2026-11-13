@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>阿里山 2天1夜 · 11/21–22</title>
+<style>
+:root{--bg:#E8EEEC;--card:#F6F9F8;--ink:#14302A;--mute:#5B726B;--line:#CBD8D3;--pri:#1F4D43;--on:#F6F9F8;--acc:#D9962B;--rail:#8E4B2E;--warn:#FBEFD5;--warnink:#5A3A06;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1C19;--card:#16282400;--card:#162824;--ink:#E3EEEA;--mute:#93AAA3;--line:#27403A;--pri:#7FC2B0;--on:#0E1C19;--acc:#E8B04F;--rail:#D9946F;--warn:#3A2D12;--warnink:#F2D8A2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1C19;--card:#162824;--ink:#E3EEEA;--mute:#93AAA3;--line:#27403A;--pri:#7FC2B0;--on:#0E1C19;--acc:#E8B04F;--rail:#D9946F;--warn:#3A2D12;--warnink:#F2D8A2;color-scheme:dark}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.65 "PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+h1,h2{font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;margin:0}
+.hero{position:relative;background:var(--pri);color:var(--on);padding:22px 20px 70px;overflow:hidden}
+.hero h1{font-size:30px;letter-spacing:.06em;line-height:1.25}
+.hero p{margin:6px 0 0;opacity:.85;font-size:14px}
+.hero svg{position:absolute;left:0;bottom:-1px;width:100%;height:78px}
+main{padding:0 16px;max-width:640px;margin:0 auto}
+.pane{display:none;padding-top:14px}.pane.on{display:block}
+.seg{display:flex;gap:8px;margin:2px 0 14px}
+.seg button{flex:1;padding:10px;border:1.5px solid var(--pri);background:transparent;color:var(--pri);border-radius:999px;font:inherit;font-weight:600}
+.seg button.on{background:var(--pri);color:var(--on)}
+.day-t{font-size:14px;color:var(--mute);margin:0 0 10px}
+.tl{list-style:none;margin:0;padding:0 0 0 0;position:relative}
+.tl:before{content:"";position:absolute;left:49px;top:8px;bottom:8px;border-left:2px dashed var(--rail);opacity:.55}
+.it{display:flex;gap:12px;margin-bottom:12px}
+.tm{width:42px;flex:none;text-align:right;font-weight:700;font-size:14px;padding-top:12px;font-variant-numeric:tabular-nums}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--acc);border:3px solid var(--bg);flex:none;margin:15px 0 0 -2px;position:relative;z-index:1;box-shadow:0 0 0 1.5px var(--rail)}
+.cd{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.cd h3{margin:0;font-size:16px;line-height:1.4}.cd p{margin:4px 0 0;font-size:14px;color:var(--mute)}
+.bk{display:inline-block;font-size:12px;background:var(--pri);color:var(--on);border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.btns a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:600;font-size:14px;padding:9px 14px;border-radius:10px;background:var(--pri);color:var(--on)}
+.btns a.s{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+.note{background:var(--warn);color:var(--warnink);border-radius:12px;padding:11px 14px;font-size:14px;margin:0 0 14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.box h2{font-size:18px;margin-bottom:6px}.box p,.box li{font-size:14.5px}.box ul{margin:6px 0 0;padding-left:18px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.row:last-child{border:0}.row b{white-space:nowrap}.row span{color:var(--mute);font-size:13px;display:block}
+label.ck{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+label.ck input{width:20px;height:20px;accent-color:var(--pri);flex:none}
+label.ck input:checked+span{text-decoration:line-through;opacity:.55}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav button{flex:1;border:0;background:none;color:var(--mute);font:inherit;font-size:12px;padding:9px 0 8px;display:flex;flex-direction:column;align-items:center;gap:1px}
+nav button i{font-style:normal;font-size:20px;line-height:1.2}nav button.on{color:var(--pri);font-weight:700}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<header class="hero">
+<h1>阿里山<br>兩天一夜</h1>
+<p>11/21（六）–11/22（日）· 2大2小 · 自駕</p>
+<svg viewBox="0 0 400 78" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 L60 22 L110 44 L170 10 L230 40 L290 18 L350 42 L400 26 V78 H0Z" fill="#2E6A5C" opacity=".55"/><path d="M0 64 L70 40 L130 58 L200 30 L270 56 L340 36 L400 54 V78 H0Z" fill="var(--bg)"/><path d="M20 70 Q120 52 210 60 T390 46" fill="none" stroke="#D9962B" stroke-width="2" stroke-dasharray="5 4"/></svg>
+</header>
+<main>
+<section id="p0" class="pane on">
+<div class="seg"><button data-d="0" class="on">Day 1｜11/21 六</button><button data-d="1">Day 2｜11/22 日</button></div>
+<div class="note">沼平線與神木線班次都已對照林鐵處官網（2024/7/6 起實施），出發前一天請再看一次公告。山路時間為概估，週末請多留緩衝。</div>
+<p class="day-t" id="dt"></p>
+<ul class="tl" id="tl"></ul>
+</section>
+<section id="p1" class="pane">
+<div class="box"><h2>自駕路線</h2><div id="tr"></div></div>
+<div class="box"><h2>園區小火車</h2><p>沼平線、神木線單程票價：全票 100 元、半票 50 元（以官網為準）。園區門票：本國籍 200 元，7～12 歲 150 元；4 歲是否免票請看現場公告。</p></div>
+<div class="box"><h2>開車提醒</h2><ul><li>兩位小朋友依法使用安全座椅或增高墊。</li><li>山區訊號不穩，先下載離線地圖。</li><li>容易暈車的人先備好藥與零食。</li><li>夜間山路起霧，請慢開。</li></ul></div>
+</section>
+<section id="p2" class="pane">
+<div class="box"><h2>璦勒芬莊園民宿</h2><p>嘉義縣番路鄉公田村 7 號（隙頂）</p><ul><li>11/21 16:00 入住，11/22 計劃 09:30 退房</li><li>頂樓無邊際溫水泳池（Google 地圖摘要：全年開放）</li><li>含下午茶與早餐；泳池開放時間請向民宿確認</li></ul><div class="btns"><a href="#" data-nav="嘉義縣番路鄉公田村7號 璦勒芬莊園民宿">🧭 導航</a></div></div>
+<div class="box"><h2>已訂餐廳</h2>
+<div class="row"><div><b>佐一茶屋</b><span>11/21 11:00 · 樂野村 2 號之 9 號</span></div><a href="tel:0975913068">撥打</a></div>
+<div class="row"><div><b>阿宏の家</b><span>11/21 18:30 · 隙頂 42 號</span></div><a href="tel:052586481">撥打</a></div>
+<div class="row"><div><b>逐鹿文創園區</b><span>11/22 · 17:00 打烊</span></div><a href="tel:052590089">撥打</a></div></div>
+</section>
+<section id="p3" class="pane"><div class="box"><h2>行李清單</h2><div id="pk"></div></div></section>
+<section id="p4" class="pane">
+<div class="box"><h2>預估花費</h2><div id="bd"></div></div>
+<p class="day-t">不含已訂的民宿與兩間餐廳。金額為概估，實際以現場與官網為準。</p>
+</section>
+</main>
+<nav id="nv"><button class="on" data-p="0"><i>🗓️</i>每日行程</button><button data-p="1"><i>🚗</i>交通</button><button data-p="2"><i>🏨</i>住宿</button><button data-p="3"><i>🎒</i>行李</button><button data-p="4"><i>💰</i>預算</button></nav>
+<script>
+const D=[[
+["07:30","高雄大社出發","國道 3 號到中埔交流道，再上台 18 線，約 3.5 小時（概估）。週六車多，想更穩可 07:00 出發。"],
+["11:00","佐一茶屋","已訂。用餐約 1 小時，12:00 離開。","嘉義縣阿里山鄉樂野村2號之9號 佐一茶屋","0975913068"],
+["13:00","抵達阿里山森林遊樂區","停車後買門票與火車票。","阿里山國家森林遊樂區"],
+["13:30","沼平線：阿里山站 → 沼平站","搭 45 次（13:30 開，13:36 到），已對照官網。想多走一點就搭 13:00 的 43 次，要先買好票。","沼平車站 阿里山"],
+["13:40","步行：姊妹潭 → 三代木 → 神木站","14:25 前要走到神木站，約 45 分鐘。到姊妹潭已過 13:55 或孩子走不動，就折返搭 14:20 的沼平線（48 次，14:26 回阿里山站）。"],
+["14:30","神木線：神木站 → 阿里山站","搭 115 次（14:30 開、14:37 到），已對照林鐵處官網。錯過就搭 15:10 的 117 次，但會晚到民宿。14:45 前要回到停車處。","神木車站 阿里山"],
+["14:45","開車下山到隙頂","約 1～1.25 小時（概估）。"],
+["16:00","入住璦勒芬莊園","無邊際溫水泳池，含下午茶。","嘉義縣番路鄉公田村7號 璦勒芬莊園民宿"],
+["18:30","阿宏の家 晚餐","已訂，18:00 前往。巷弄斜坡，開車留意；菜量大，建議空腹。","嘉義縣番路鄉公田村隙頂42號 阿宏の家","052586481"],
+["20:00","回民宿休息","泳池開放時間請先向民宿確認。"]],[
+["06:10","房間看日出","時間為估計。"],
+["08:00","民宿早餐"],
+["09:30","退房，逛二延平步道","約 1 小時，孩子走得動。","二延平步道"],
+["11:15","前往奮起湖老街","約 1 小時（概估）。","奮起湖老街"],
+["12:15","奮起湖午餐","吃鐵路便當、逛老街到 14:00。"],
+["14:00","前往逐鹿文創園區","約 1.25～1.5 小時（概估）。"],
+["15:30","餵梅花鹿","園區 17:00 打烊。小黑蚊多，先噴防蚊液。","嘉義縣番路鄉觸口村梅花一路1-1號 鄒族逐鹿文創園區","052590089"],
+["16:30","回高雄","預計 19:00 前後到家。","高雄市大社區大吉路306巷95號"]]];
+const T=[["大社 → 佐一茶屋","約 3.5 小時"],["佐一茶屋 → 阿里山","約 1 小時"],["阿里山 → 璦勒芬（隙頂）","約 1～1.25 小時"],["民宿 → 阿宏の家","同在隙頂，數分鐘"],["民宿 → 奮起湖老街","約 1 小時"],["奮起湖 → 逐鹿文創園區","約 1.25～1.5 小時"],["逐鹿 → 高雄大社","約 2 小時（概估）"]];
+const P=["身分證、行車證件、駕照","保暖衣物、防風防雨外套","帽子、手套","泳衣、泳帽、浴巾","孩子換洗衣物（多帶一套）","防蚊液（小黑蚊）","暈車藥、零食、水壺","行動電源、手機充電線","雨具、好走防滑的鞋","離線地圖（出發前下載）","安全座椅／增高墊"];
+const B=[["去程油錢＋國道","700–900"],["園區門票（2 大 + 7 歲）","約 550"],["小火車（沼平線＋神木線）","約 500"],["停車費","100–200"],["奮起湖午餐（4 人）","600–1,000"],["逐鹿體驗（餵鹿等）","200–500"],["回程油錢＋國道","700–900"],["合計（概估）","3,400–4,600"]];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const nav=q=>"https://www.google.com/maps/dir/?api=1&travelmode=driving&destination="+encodeURIComponent(q);
+function day(d){$("#dt").textContent=d?"11/22（日）· 回程順遊":"11/21（六）· 上山、小火車、泳池";
+$("#tl").innerHTML=D[d].map(x=>'<li class="it"><div class="tm">'+x[0]+'</div><div class="dot"></div><div class="cd"><h3>'+x[1]+'</h3>'+(x[2]?'<p>'+x[2]+'</p>':'')+(x[3]?'<div class="btns"><a href="'+nav(x[3])+'" target="_blank" rel="noopener">🧭 導航</a>'+(x[4]?'<a class="s" href="tel:'+x[4]+'">📞 電話</a>':'')+'</div>':'')+'</div></li>').join("");
+$$(".seg button").forEach(b=>b.classList.toggle("on",+b.dataset.d===d))}
+function show(i){$$(".pane").forEach((p,k)=>p.classList.toggle("on",k===i));$$("#nv button").forEach((b,k)=>b.classList.toggle("on",k===i));scrollTo(0,0);try{localStorage.setItem("al_tab",i)}catch(e){}}
+$("#tr").innerHTML=T.map(r=>'<div class="row"><b>'+r[0]+'</b><span style="margin:0">'+r[1]+'</span></div>').join("");
+$("#bd").innerHTML=B.map(r=>'<div class="row"><span style="margin:0;font-size:14.5px;color:inherit">'+r[0]+'</span><b>NT$ '+r[1]+'</b></div>').join("");
+let ck={};try{ck=JSON.parse(localStorage.getItem("al_ck")||"{}")}catch(e){}
+$("#pk").innerHTML=P.map((t,i)=>'<label class="ck"><input type="checkbox" data-i="'+i+'"'+(ck[i]?" checked":"")+'><span>'+t+'</span></label>').join("");
+$("#pk").addEventListener("change",e=>{ck[e.target.dataset.i]=e.target.checked;try{localStorage.setItem("al_ck",JSON.stringify(ck))}catch(x){}});
+$$(".seg button").forEach(b=>b.onclick=()=>day(+b.dataset.d));
+$$("#nv button").forEach(b=>b.onclick=()=>show(+b.dataset.p));
+$$("[data-nav]").forEach(a=>{a.href=nav(a.dataset.nav);a.target="_blank";a.rel="noopener"});
+day(0);
+</script>
+</body>
+</html>
